@@ -1,0 +1,74 @@
+<!-- templates/nav.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Navigation</title>
+    <style>
+        .navigation {
+            padding: 20px;
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .blog-page-select {
+            margin-top: 20px;
+        }
+        select {
+            padding: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <h2> My Express Blog</h2>
+        
+        <!-- Button for Home -->
+        <a href="/home" class="button">Home</a>
+        
+        <!-- Button for Blog Home -->
+        <a href="/bloghome" class="button">Blog Home</a>
+        
+        <!-- Blog Page selection -->
+        <div class="blog-page-select">
+            <h3>Go to a Interns Blog Post</h3>
+            <select id="blogSelect" onchange="if(this.value) window.location.href='/blogpage/' + this.value">
+                <option value="">Select a Blog</option>
+                <!-- Blog options will be populated by JavaScript -->
+            </select>
+        </div>
+    </div>
+
+    <script>
+        // Example blog data (replace with your actual blogs.js data if served)
+        const blogs = [
+            { title: "Blog 1", slug: "om-dba"},
+            { title: "Blog 2", slug: "a-flutter"},
+            // Add more blogs as needed
+            { title: "Blog 3", slug: "t-flutter"},
+            { title: "Blog 4", slug: "k-web"}
+        ];
+
+        // Populate the dropdown
+        const select = document.getElementById('blogSelect');
+        blogs.forEach(blog => {
+            const option = document.createElement('option');
+            option.value = blog.slug;
+            option.textContent = blog.title;
+            select.appendChild(option);
+        });
+    </script>
+</body>
+</html>

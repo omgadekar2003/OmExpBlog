@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express.js Blog - Backend Connectivity</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        p {
+            line-height: 1.6;
+        }
+        code {
+            background: #eee;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Exploring Express.js for Backend Connectivity</h1>
+        <p>
+            Welcome to my blog! Today, we’re diving into <strong>Express.js</strong>, a powerful and lightweight framework for building backend applications in Node.js. If you’re new to backend development or looking for an efficient way to connect your frontend to a server, Express.js is a fantastic choice.
+        </p>
+        <h2>What is Express.js?</h2>
+        <p>
+            Express.js is a minimal and flexible web application framework for Node.js. It simplifies the process of creating a server, handling HTTP requests, and connecting your application to databases or APIs. With Express, you can quickly set up routes, manage middleware, and serve static files—like this HTML page!
+        </p>
+        <h2>How Does It Help with Backend Connectivity?</h2>
+        <p>
+            Backend connectivity is all about making your server talk to other systems, like databases, external APIs, or your frontend. Express.js makes this easy with features like:
+        </p>
+        <ul>
+            <li><strong>Routing:</strong> Define endpoints like <code>/api/users</code> to handle requests.</li>
+            <li><strong>Middleware:</strong> Process requests before sending responses, such as parsing JSON data with <code>express.json()</code>.</li>
+            <li><strong>Static Files:</strong> Serve HTML, CSS, and JavaScript files using <code>express.static</code>.</li>
+            <li><strong>Integration:</strong> Connect to databases like MongoDB or MySQL with libraries like Mongoose or Sequelize.</li>
+        </ul>
+        <h2>Example in Action</h2>
+        <p>
+            In this blog app, we’re using Express.js to serve this page. The server (defined in <code>index.js</code>) routes requests to <code>blog.js</code>, which sends this HTML file using <code>res.sendFile()</code>. I
